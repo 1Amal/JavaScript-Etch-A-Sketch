@@ -1,0 +1,9 @@
+.container{
+background-color: blue;
+display: flex;
+align-items: center;
+}
+
+#item1{
+    flex:1;
+}
