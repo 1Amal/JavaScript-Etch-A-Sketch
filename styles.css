@@ -1,9 +1,16 @@
 .container{
-background-color: blue;
 display: flex;
 align-items: center;
+height:16em;
+width:16em;
 }
 
-#item1{
-    flex:1;
+.content{
+    display: flex;
+    /* flex-direction: row; */
+    /* align-content: flex-end; */
+    width:1em;
+    height: 1em;
+
+    background-color: red;
 }
