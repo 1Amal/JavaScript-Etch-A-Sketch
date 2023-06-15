@@ -1,3 +1,5 @@
+let gridSize=257;
+
 function createGrid (){
 const container=document.querySelector("#container");
 const content=document.createElement('div');
@@ -6,7 +8,7 @@ content.textContent="1";
 container.appendChild(content);
 }
 
-for (let i=0; i<32; i++){
+for (let i=0; i<gridSize; i++){
     createGrid();
 
 

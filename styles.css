@@ -1,16 +1,19 @@
-.container{
-display: flex;
+#container{
+display:flex;
 align-items: center;
 height:16em;
 width:16em;
+/* flex-flow: column; */
+flex-wrap: wrap ;
 }
 
 .content{
-    display: flex;
+    /* display: flex; */
     /* flex-direction: row; */
     /* align-content: flex-end; */
+    flex:1;
     width:1em;
     height: 1em;
 
-    background-color: red;
+    background-color: white;
 }
