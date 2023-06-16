@@ -14,3 +14,18 @@ for (let i=0; i<gridSize; i++){
 
 }
 
+function itWorked (){
+    console.log("It worked");
+}
+
+function changeGrid () {
+const contentDiV=document.querySelector("content");
+// contentDiV.addEventListener("mouseenter",itWorked);
+document.getElementById("containerDiv").addEventListener("mouseenter", itWorked);
+
+
+}
+
+
+
+changeGrid();
