@@ -16,7 +16,7 @@ flex-wrap: wrap;
 
 }
 
-.content{
+.gridDivs{
 
     /*Based on a grid size of 960px x 960px= Each Div will be about 10px wide and tall */
     width:80px;
@@ -25,8 +25,12 @@ flex-wrap: wrap;
     background-color: greenyellow;
 }
 
-#containerDiv>div:nth-child(17n + 1) {
+#containerDiv>div:nth-child(16n +1) {
     width: 100%;
     border: 0;
     height: 0;
+  }
+
+  .changedContent{
+    background-color: red;
   }
