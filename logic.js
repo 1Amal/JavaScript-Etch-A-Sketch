@@ -16,6 +16,9 @@ After above code works change the code to add a Button when clicked generates a 
 
 After submission of popup remove the old grid and create a new grid with numberOfSquaresPerSide within containerDiv with a maximum pixel size of 960px*960px
 
+After above code works randomize RGB value after hovering.
+
+After above code works, implement a progressive darkening effect where each interaction adds 10% more black or color to the square. The objective is to achieve a completely black square only after ten interactions.
 
 */
 
