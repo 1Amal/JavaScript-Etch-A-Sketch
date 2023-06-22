@@ -25,7 +25,7 @@ After above code works, implement a progressive darkening effect where each inte
 
 function createGrid () // This function will create the grid
 {
-    let numberOfSquaresPerSide=16;
+    let numberOfSquaresPerSide=20;
     let gridSize=numberOfSquaresPerSide*numberOfSquaresPerSide;
     for (let i=0; i<gridSize; i++)
         {
@@ -48,15 +48,15 @@ function detectMouse ()
 function mouseHoverEffect (){
 
     
-    let currentLocation=document.getElementById('20');
-    currentLocation.classList.add("changedContent");
-    // document.getElementById('id1').className = 'changedContent';
+    let currentLocation=document.getElementsByClassName("gridDivs");
+    // let currentID=currentLocation.get("id");
+    // currentLocation.classList.add("changedContent");
 
     // currentLocation.style.backgroundColor = 'rgb(255, 125, 115)';  
     // containerDiv.style.backgroundColor = 'rgb(255, 125, 115)';  
 
-    // let currentLocation=document.getElementsByClassName('content');
     console.log(currentLocation);
+    // console.log(currentID);
 }
 
 createGrid();
