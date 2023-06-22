@@ -13,27 +13,29 @@ number of Div's required: 16x16= 256
 /* flex-flow: row; */
 /* justify-content: space-around; */
 flex-wrap: wrap;
+width: 960px;
+height: 960px;
+
 
 }
 
 .gridDivs{
 
     /*Based on a grid size of 960px x 960px= Each Div will be about 10px wide and tall */
-    width:80px;
-    height:80px;
-    border:0.1px solid black;
+    width:60px;
+    height:60px;
+    border:1px solid black;
     margin:0px;
     background-color: greenyellow;
 }
 
-#containerDiv>div:nth-child(16n +1) {
+/* #containerDiv>div:nth-child(16n +1) {
     width: 100%;
     border: 0;
     height: 0;
-  }
+  } */
 
   .changedContent{
-    width:80px;
-    height:80px;
+  
     border:1px solid black;
-    background-color: red;  }
+    background-color: blue;  }
