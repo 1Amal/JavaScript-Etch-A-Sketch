@@ -4,7 +4,7 @@ Create a containerDiv with a maximum pixel size of 960px*960px
 
 Then create a webpage with a 16x16 grid of square Divs using JavaScript inside the ContainerDiv: Use JS and CSS
 
-Make each Div appear as a Div: Use JS
+Make each Div appear as a grid with size as set by gridSize: Use JS
 
 border and margin to be zero: Use CSS
 
@@ -23,7 +23,6 @@ After above code works, implement a progressive darkening effect where each inte
 */
 
 
-
 function createGrid () // This function will create the grid
 {
     let numberOfSquaresPerSide=16;
@@ -32,22 +31,24 @@ function createGrid () // This function will create the grid
         {
             const containerDiv=document.querySelector("#containerDiv");
             const gridDivs=document.createElement('div');
-            gridDivs.classList.add("gridDivs");
-            gridDivs.setAttribute("id","id1")
+            gridDivs.classList.add("gridDivs"); //Set class for all Grid Div's
+            gridDivs.setAttribute("id",i); //Set a unique ID to each Grid Div's
             // content.textContent="1";
             containerDiv.appendChild(gridDivs);
-
          }
 }
 
-// for (let i=0; i<gridSize; i++){
-//     createGrid();
+function detectMouse ()
+{
+    // const contentDiV=document.querySelector("gridDivs");
+    document.getElementById("containerDiv").addEventListener("mouseenter", mouseHoverEffect);
+}
 
 
-// }
+function mouseHoverEffect (){
 
-function itWorked (){
-    let currentLocation=document.getElementById('id1');
+    
+    let currentLocation=document.getElementById('20');
     currentLocation.classList.add("changedContent");
     // document.getElementById('id1').className = 'changedContent';
 
@@ -58,16 +59,5 @@ function itWorked (){
     console.log(currentLocation);
 }
 
-function changeGrid () {
-const contentDiV=document.querySelector("gridDivs");
-// contentDiV.addEventListener("mouseenter",itWorked);
-document.getElementById("containerDiv").addEventListener("mouseenter", itWorked);
-
-
-}
-
-
-
-// changeGrid();
-
 createGrid();
+detectMouse ();
