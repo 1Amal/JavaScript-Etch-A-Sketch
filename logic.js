@@ -22,23 +22,29 @@ After above code works, implement a progressive darkening effect where each inte
 
 */
 
-let numberOfSquaresPerSide=16;
-let gridSize=numberOfSquaresPerSide*numberOfSquaresPerSide;
 
-function createGrid (){
-const containerDiv=document.querySelector("#containerDiv");
-const gridDivs=document.createElement('div');
-gridDivs.classList.add("gridDivs");
-gridDivs.setAttribute("id","id1")
-// content.textContent="1";
-containerDiv.appendChild(gridDivs);
+
+function createGrid () // This function will create the grid
+{
+    let numberOfSquaresPerSide=16;
+    let gridSize=numberOfSquaresPerSide*numberOfSquaresPerSide;
+    for (let i=0; i<gridSize; i++)
+        {
+            const containerDiv=document.querySelector("#containerDiv");
+            const gridDivs=document.createElement('div');
+            gridDivs.classList.add("gridDivs");
+            gridDivs.setAttribute("id","id1")
+            // content.textContent="1";
+            containerDiv.appendChild(gridDivs);
+
+         }
 }
 
-for (let i=0; i<gridSize; i++){
-    createGrid();
+// for (let i=0; i<gridSize; i++){
+//     createGrid();
 
 
-}
+// }
 
 function itWorked (){
     let currentLocation=document.getElementById('id1');
@@ -62,4 +68,6 @@ document.getElementById("containerDiv").addEventListener("mouseenter", itWorked)
 
 
 
-changeGrid();
+// changeGrid();
+
+createGrid();
