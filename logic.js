@@ -25,7 +25,7 @@ After above code works, implement a progressive darkening effect where each inte
 
 function createGrid () // This function will create the grid
 {
-    let numberOfSquaresPerSide=20;
+    let numberOfSquaresPerSide=16;
     let gridSize=numberOfSquaresPerSide*numberOfSquaresPerSide;
     for (let i=0; i<gridSize; i++)
         {
@@ -36,28 +36,39 @@ function createGrid () // This function will create the grid
             // content.textContent="1";
             containerDiv.appendChild(gridDivs);
          }
+         
+    detectMouse ();
+
 }
 
 function detectMouse ()
 {
     // const contentDiV=document.querySelector("gridDivs");
-    document.getElementById("containerDiv").addEventListener("mouseenter", mouseHoverEffect);
+    document.getElementById("containerDiv").addEventListener("mouseenter", 
+    function mouseHoverEffect()
+    {
+        let currentLocation=document.getElementsByClassName("gridDivs");
+        console.log(currentLocation);
+
+    });
 }
 
 
-function mouseHoverEffect (){
+// function mouseHoverEffect (){
 
     
-    let currentLocation=document.getElementsByClassName("gridDivs");
-    // let currentID=currentLocation.get("id");
-    // currentLocation.classList.add("changedContent");
+//     let currentLocation=document.getElementsByClassName("gridDivs");
+//     console.log(currentLocation);
 
-    // currentLocation.style.backgroundColor = 'rgb(255, 125, 115)';  
-    // containerDiv.style.backgroundColor = 'rgb(255, 125, 115)';  
 
-    console.log(currentLocation);
-    // console.log(currentID);
-}
+
+//     // let currentID=currentLocation.get("id");
+//     // currentLocation.classList.add("changedContent");
+
+//     // currentLocation.style.backgroundColor = 'rgb(255, 125, 115)';  
+//     // containerDiv.style.backgroundColor = 'rgb(255, 125, 115)';  
+
+//     // console.log(currentID);
+// }
 
 createGrid();
-detectMouse ();
