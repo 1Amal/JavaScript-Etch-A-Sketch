@@ -43,12 +43,21 @@ function createGrid () // This function will create the grid
 
 function detectMouse ()
 {
-    // const contentDiV=document.querySelector("gridDivs");
-    document.getElementById("containerDiv").addEventListener("mouseenter", 
+    //Below code will get the current location of mouse pointer
+    const currentMousePointer=document.getElementById("containerDiv");
+    currentMousePointer.addEventListener("mouseenter", 
     function mouseHoverEffect()
     {
-        let currentLocation=document.getElementsByClassName("gridDivs");
+        const currentLocation=document.getElementById(this.getAttribute('id'));
         console.log(currentLocation);
+
+    //Below code will change color of the Divs    
+        let changeDivColor=document.getElementById("10");
+        changeDivColor.classList.add("changedContent");
+
+        // let currentLocation=document.getElementsByClassName("gridDivs");
+
+        // let currentID=currentLocation.get("id");
 
     });
 }
