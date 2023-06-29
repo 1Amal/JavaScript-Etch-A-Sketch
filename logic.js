@@ -48,8 +48,15 @@ function detectMouse ()
     currentMousePointer.addEventListener("mouseenter", 
     function mouseHoverEffect()
     {
-        const currentLocation=document.getElementById(this.getAttribute('id'));
+        // const currentLocation=document.getElementById(this.getAttribute('id'));
+
+        const currentLocation=document.getElementsByClassName("gridDivs");
+        // currentLocation.classList.add('changedContent')
+        // const test=currentLocation.getAttribute("id");           
+
         console.log(currentLocation);
+
+        
 
     //Below code will change color of the Divs    
         let changeDivColor=document.getElementById("10");
