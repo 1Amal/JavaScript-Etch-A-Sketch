@@ -34,57 +34,16 @@ function createGrid () // This function will create the grid
             gridDivs.classList.add("gridDivs"); //Set class for all Grid Div's
             gridDivs.setAttribute("id",i); //Set a unique ID to each Grid Div's
             // content.textContent="1";
+            // Following code will change the color of the Div after mouse has hovered over the Div
+            gridDivs.addEventListener('mouseover', (e)=>{
+                e.target.style.background='blue';
+                console.log(e);
+            });
+
             containerDiv.appendChild(gridDivs);
+
          }
          
-    detectMouse ();
-
 }
-
-function detectMouse ()
-{
-    //Below code will get the current location of mouse pointer
-    const currentMousePointer=document.getElementById("containerDiv");
-    currentMousePointer.addEventListener("mouseenter", 
-    function mouseHoverEffect()
-    {
-        // const currentLocation=document.getElementById(this.getAttribute('id'));
-
-        const currentLocation=document.getElementsByClassName("gridDivs");
-        // currentLocation.classList.add('changedContent')
-        // const test=currentLocation.getAttribute("id");           
-
-        console.log(currentLocation);
-
-        
-
-    //Below code will change color of the Divs    
-        let changeDivColor=document.getElementById("10");
-        changeDivColor.classList.add("changedContent");
-
-        // let currentLocation=document.getElementsByClassName("gridDivs");
-
-        // let currentID=currentLocation.get("id");
-
-    });
-}
-
-
-// function mouseHoverEffect (){
-
-    
-//     let currentLocation=document.getElementsByClassName("gridDivs");
-//     console.log(currentLocation);
-
-
-
-//     // let currentID=currentLocation.get("id");
-//     // currentLocation.classList.add("changedContent");
-
-//     // currentLocation.style.backgroundColor = 'rgb(255, 125, 115)';  
-//     // containerDiv.style.backgroundColor = 'rgb(255, 125, 115)';  
-
-//     // console.log(currentID);
-// }
 
 createGrid();
