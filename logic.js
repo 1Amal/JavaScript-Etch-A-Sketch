@@ -16,10 +16,6 @@ After above code works change the code to add a Button when clicked generates a 
 
 After submission of popup remove the old grid and create a new grid with numberOfSquaresPerSide within containerDiv with a maximum pixel size of 960px*960px
 
-After above code works randomize RGB value after hovering.
-
-After above code works, implement a progressive darkening effect where each interaction adds 10% more black or color to the square. The objective is to achieve a completely black square only after ten interactions.
-
 */
 let gridStatus=0;
 start();
@@ -35,8 +31,6 @@ function start()
     else
     {
     location.reload();
-    // alert("Refreshing Grid");
-
     }
     
 }
@@ -46,11 +40,12 @@ function createGrid ()
 {
  
     
-    let numberOfSquaresPerSide=prompt("Please enter grid size");
-    let heightLengthDiv=Math.sqrt((960*960)/(numberOfSquaresPerSide*numberOfSquaresPerSide));
-        console.log(heightLengthDiv+"Squares per side");
+    let numberOfSquaresPerSide=prompt("Please enter number of squares per side"); // This will prompt for grid size
+    let heightLengthDiv=Math.sqrt((960*960)/(numberOfSquaresPerSide*numberOfSquaresPerSide)); // This code will calculate the height and length of each grid size
+    console.log(heightLengthDiv+"Squares per side");
     console.log("Square root "+heightLengthDiv)
-    if (numberOfSquaresPerSide<=100)
+    
+    if (numberOfSquaresPerSide<=100) // This code will only run if the grid size is below 100
     {
         let gridSize=numberOfSquaresPerSide*numberOfSquaresPerSide;
         // console.log(gridSize);
@@ -66,15 +61,15 @@ function createGrid ()
                     f.target.style.background='blue';
                     // console.log(f);
                 });
+                //Following code will set height and length of Div based on inputted grid size
                 gridDivs.style.width=heightLengthDiv+"px";
                 gridDivs.style.height=heightLengthDiv+"px";
 
-    
                 containerDiv.appendChild(gridDivs);
     
              }
     }
-
+//Below error will prompt if grid size is above 100
     else{
         alert("Grid size needs to be below 100")
     }
@@ -82,4 +77,3 @@ function createGrid ()
          
 }
 
-// createGrid();

@@ -5,28 +5,13 @@
 #containerDiv{
 display:flex;
 align-items: center;
-/* width :1000px;
-height:960px; */
-/* Number of pixels:921600
-number of Div's required: 16x16= 256
-*/
-/* flex-flow: row; */
-/* justify-content: space-around; */
 flex-wrap: wrap;
 width: 960px;
 height: 960px;
-
-
 }
 
 .gridDivs{
-
-    /*Based on a grid size of 960px x 960px= Each Div will be about 10px wide and tall */
-    /* width:60px;
-    height:60px; */
     border:1px solid black;
     margin:0px;
     background-color: greenyellow;
 }
-
-.gridDivs:hover{background-color:red;}
