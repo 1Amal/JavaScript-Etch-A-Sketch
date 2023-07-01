@@ -30,15 +30,3 @@ height: 960px;
 }
 
 .gridDivs:hover{background-color:red;}
-
-
-/* #containerDiv>div:nth-child(16n +1) {
-    width: 100%;
-    border: 0;
-    height: 0;
-  } */
-
-  .changedContent{
-    
-    border:1px solid black;
-    background-color: blue;  }
