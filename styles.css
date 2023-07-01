@@ -22,8 +22,8 @@ height: 960px;
 .gridDivs{
 
     /*Based on a grid size of 960px x 960px= Each Div will be about 10px wide and tall */
-    width:60px;
-    height:60px;
+    /* width:60px;
+    height:60px; */
     border:1px solid black;
     margin:0px;
     background-color: greenyellow;

@@ -41,30 +41,34 @@ function start()
     
 }
 
-
-
-function createGrid () // This function will create the grid
+// This function will create the grid
+function createGrid () 
 {
  
     
     let numberOfSquaresPerSide=prompt("Please enter grid size");
+    let heightLengthDiv=Math.sqrt((960*960)/(numberOfSquaresPerSide*numberOfSquaresPerSide));
+        console.log(heightLengthDiv+"Squares per side");
+    console.log("Square root "+heightLengthDiv)
     if (numberOfSquaresPerSide<=100)
     {
         let gridSize=numberOfSquaresPerSide*numberOfSquaresPerSide;
-        console.log(gridSize);
+        // console.log(gridSize);
         for (let i=0; i<gridSize; i++)
             {
-                console.log(i);
+                // console.log(i);
                 const containerDiv=document.querySelector("#containerDiv");
                 const gridDivs=document.createElement('div');
                 gridDivs.classList.add("gridDivs"); //Set class for all Grid Div's
                 gridDivs.setAttribute("id",i); //Set a unique ID to each Grid Div's
-                // content.textContent="1";
                 // Following code will change the color of the Div after mouse has hovered over the Div
                 gridDivs.addEventListener('mouseover', (f)=>{
                     f.target.style.background='blue';
-                    console.log(f);
+                    // console.log(f);
                 });
+                gridDivs.style.width=heightLengthDiv+"px";
+                gridDivs.style.height=heightLengthDiv+"px";
+
     
                 containerDiv.appendChild(gridDivs);
     
