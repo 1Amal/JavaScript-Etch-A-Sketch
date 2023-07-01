@@ -25,8 +25,10 @@ After above code works, implement a progressive darkening effect where each inte
 
 function createGrid () // This function will create the grid
 {
-    let numberOfSquaresPerSide=16;
+    
+    let numberOfSquaresPerSide=prompt("Please enter grid size");
     let gridSize=numberOfSquaresPerSide*numberOfSquaresPerSide;
+    console.log(gridSize);
     for (let i=0; i<gridSize; i++)
         {
             const containerDiv=document.querySelector("#containerDiv");
@@ -35,9 +37,9 @@ function createGrid () // This function will create the grid
             gridDivs.setAttribute("id",i); //Set a unique ID to each Grid Div's
             // content.textContent="1";
             // Following code will change the color of the Div after mouse has hovered over the Div
-            gridDivs.addEventListener('mouseover', (e)=>{
-                e.target.style.background='blue';
-                console.log(e);
+            gridDivs.addEventListener('mouseover', (f)=>{
+                f.target.style.background='blue';
+                console.log(f);
             });
 
             containerDiv.appendChild(gridDivs);
@@ -46,4 +48,4 @@ function createGrid () // This function will create the grid
          
 }
 
-createGrid();
+// createGrid();
