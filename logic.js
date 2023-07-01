@@ -27,24 +27,33 @@ function createGrid () // This function will create the grid
 {
     
     let numberOfSquaresPerSide=prompt("Please enter grid size");
-    let gridSize=numberOfSquaresPerSide*numberOfSquaresPerSide;
-    console.log(gridSize);
-    for (let i=0; i<gridSize; i++)
-        {
-            const containerDiv=document.querySelector("#containerDiv");
-            const gridDivs=document.createElement('div');
-            gridDivs.classList.add("gridDivs"); //Set class for all Grid Div's
-            gridDivs.setAttribute("id",i); //Set a unique ID to each Grid Div's
-            // content.textContent="1";
-            // Following code will change the color of the Div after mouse has hovered over the Div
-            gridDivs.addEventListener('mouseover', (f)=>{
-                f.target.style.background='blue';
-                console.log(f);
-            });
+    if (numberOfSquaresPerSide<=100)
+    {
+        let gridSize=numberOfSquaresPerSide*numberOfSquaresPerSide;
+        console.log(gridSize);
+        for (let i=0; i<gridSize; i++)
+            {
+                console.log(i);
+                const containerDiv=document.querySelector("#containerDiv");
+                const gridDivs=document.createElement('div');
+                gridDivs.classList.add("gridDivs"); //Set class for all Grid Div's
+                gridDivs.setAttribute("id",i); //Set a unique ID to each Grid Div's
+                // content.textContent="1";
+                // Following code will change the color of the Div after mouse has hovered over the Div
+                gridDivs.addEventListener('mouseover', (f)=>{
+                    f.target.style.background='blue';
+                    console.log(f);
+                });
+    
+                containerDiv.appendChild(gridDivs);
+    
+             }
+    }
 
-            containerDiv.appendChild(gridDivs);
+    else{
+        alert("Grid size needs to be below 100")
+    }
 
-         }
          
 }
 
