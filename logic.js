@@ -21,10 +21,31 @@ After above code works randomize RGB value after hovering.
 After above code works, implement a progressive darkening effect where each interaction adds 10% more black or color to the square. The objective is to achieve a completely black square only after ten interactions.
 
 */
+let gridStatus=0;
+start();
+// Following logic will check whether grid is created and reset if required
+function start()
+{
+    if (gridStatus==0)
+    {
+        createGrid();
+        gridStatus=1;
+    }
+
+    else
+    {
+    location.reload();
+    // alert("Refreshing Grid");
+
+    }
+    
+}
+
 
 
 function createGrid () // This function will create the grid
 {
+ 
     
     let numberOfSquaresPerSide=prompt("Please enter grid size");
     if (numberOfSquaresPerSide<=100)
